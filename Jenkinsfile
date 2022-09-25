@@ -15,7 +15,6 @@ node {
                         sh "git config user.email manishaverma70241@gmail.com"
                         sh "git config user.name Manisha148"
                         //sh "git switch master"
-                        sh "cat deployment.yaml"
                         sh "sed -i 's+raj80dockerid/test.*+manishaverma/deployk8:${DOCKERTAG}+g' deployment.yaml"
                         sh "git add ."
                         sh "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
