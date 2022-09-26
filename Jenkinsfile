@@ -15,7 +15,7 @@ node {
                         sh "git config user.email manishaverma70241@gmail.com"
                         sh "git config user.name Manisha148"
                         //sh "git switch master"
-                        sh "sed -i 's+raj80dockerid/test.*+manishaverma/deployk8:${DOCKERTAG}+g' deployment.yaml"
+                        sh "sed -i 's+manishaverma/deployk8.*+manishaverma/deployk8:${DOCKERTAG}+g' deployment.yaml"
                         sh "git add ."
                         sh "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
                         sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/kubernetesmanifest.git HEAD:main"
